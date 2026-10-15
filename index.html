@@ -6,7 +6,14 @@
 <title>Pesquisa de Satisfação · The One Palhano</title>
 <meta name="description" content="Sua opinião sobre o The One Palhano. Leva menos de 1 minuto.">
 <meta property="og:title" content="Pesquisa de Satisfação · The One Palhano">
-<meta property="og:description" content="Pesquisa rápida da DAJ Empreendimentos. Leva menos de 1 minuto.">
+<meta property="og:description" content="Responda em menos de 1 minuto. Sua opinião ajuda a DAJ a melhorar.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://joaoaleximoveisap-web.github.io/pesquisa-theone/">
+<meta property="og:image" content="https://joaoaleximoveisap-web.github.io/pesquisa-theone/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="The One Palhano · DAJ Empreendimentos">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#2c2825">
 <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+DQogIDxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgcng9IjE2IiBmaWxsPSIjNkY1NjNGIi8+DQogIDx0ZXh0IHg9IjMyIiB5PSIzOSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsIHNlcmlmIiBmb250LXNpemU9IjIzIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjRkZGREY4Ij5EQUo8L3RleHQ+DQo8L3N2Zz4NCg==" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -195,7 +202,7 @@
     </fieldset>
 
     <div class="field" style="margin-top:28px">
-      <label for="nome">Seu nome <small>(opcional)</small></label>
+      <label for="nome">Seu nome <span class="req">*</span></label>
       <input type="text" id="nome" autocomplete="name" placeholder="Como prefere ser chamado">
     </div>
 
@@ -240,6 +247,7 @@
     const motivo = marcado("motivo");
     if (!gostou) return falha("Responda a pergunta 1: se gostou do atendimento.", form.querySelector("input[name=gostou]"));
     if (!motivo) return falha("Responda a pergunta 2: o motivo de não seguir.", form.querySelector("input[name=motivo]"));
+    if (!valor("nome")) return falha("Escreva seu nome para enviar.", document.getElementById("nome"));
     if (motivo === "Outro motivo" && !valor("comentario")) return falha("Escreva qual foi o outro motivo.", document.getElementById("comentario"));
 
     const botao = document.getElementById("enviar");
@@ -248,10 +256,10 @@
     botao.textContent = "Enviando…";
     const nome = valor("nome");
     const dados = {
-      _subject: "Pesquisa The One – " + (nome || "resposta sem nome"),
+      _subject: "Pesquisa The One – " + nome,
       _template: "table",
       _captcha: "false",
-      "Nome": nome || "-",
+      "Nome": nome,
       "Gostou do atendimento": gostou,
       "Motivo": motivo,
       "Explicação": valor("comentario") || "-"
