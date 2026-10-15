@@ -68,7 +68,8 @@
   .hero p { margin: 12px auto 0; max-width: 30rem; font-size: 15px; color: var(--muted); }
 
   form { padding-block: 8px 40px; }
-  fieldset { border: 0; margin: 0; padding: 28px 0 0; min-width: 0; }
+  fieldset { border: 0; margin: 0; padding: 36px 0 0; min-width: 0; }
+  fieldset + fieldset { margin-top: 20px; }
   legend { padding: 0; display: flex; gap: 12px; align-items: baseline; }
   .qn { color: var(--gold); font-size: 12px; font-weight: 700; letter-spacing: .12em; font-variant-numeric: tabular-nums; }
   .qt { font: 500 1.3rem/1.25 var(--display); letter-spacing: -0.02em; }
@@ -179,7 +180,7 @@
 <main class="wrap">
   <form id="form" novalidate>
     <fieldset>
-      <legend><span class="qn">01</span><span class="qt">Você gostou do seu atendimento? <span class="req">*</span></span></legend>
+      <legend><span class="qn">01</span><span class="qt">Você gostou do seu atendimento?&nbsp;<span class="req">*</span></span></legend>
       <div class="answers duo">
         <label class="answer"><input type="radio" name="gostou" value="Sim"><span class="label">Sim</span><span class="tick"></span></label>
         <label class="answer"><input type="radio" name="gostou" value="Não"><span class="label">Não</span><span class="tick"></span></label>
@@ -187,7 +188,7 @@
     </fieldset>
 
     <fieldset>
-      <legend><span class="qn">02</span><span class="qt">Por qual motivo você escolheu não seguir com a negociação do empreendimento? <span class="req">*</span></span></legend>
+      <legend><span class="qn">02</span><span class="qt">Por qual motivo você escolheu não seguir com a negociação do empreendimento?&nbsp;<span class="req">*</span></span></legend>
       <div class="answers">
         <label class="answer"><input type="radio" name="motivo" value="Condição de pagamento"><span class="label">Condição de pagamento</span><span class="tick"></span></label>
         <label class="answer"><input type="radio" name="motivo" value="Valor fora do orçamento"><span class="label">Valor fora do orçamento</span><span class="tick"></span></label>
@@ -201,7 +202,7 @@
       </div>
     </fieldset>
 
-    <div class="field" style="margin-top:28px">
+    <div class="field" style="margin-top:40px">
       <label for="nome">Seu nome <span class="req">*</span></label>
       <input type="text" id="nome" autocomplete="name" placeholder="Como prefere ser chamado">
     </div>
