@@ -18,7 +18,7 @@
 <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+DQogIDxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgcng9IjE2IiBmaWxsPSIjNkY1NjNGIi8+DQogIDx0ZXh0IHg9IjMyIiB5PSIzOSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsIHNlcmlmIiBmb250LXNpemU9IjIzIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjRkZGREY4Ij5EQUo8L3RleHQ+DQo8L3N2Zz4NCg==" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   /* Visual do Diagnóstico de Investimento, com todas as perguntas numa tela só */
   :root {
@@ -30,7 +30,7 @@
     --turq: #06effd;
     --err: #e07d72;
     --line: rgba(202, 161, 94, 0.30);
-    --display: Georgia, Cambria, "Times New Roman", serif;
+    --display: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
     --sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
     color-scheme: dark;
   }
@@ -64,7 +64,7 @@
     background: linear-gradient(90deg, transparent 3%, rgba(6,239,253,.72) 18%, rgba(202,161,94,.82) 52%, rgba(6,239,253,.48) 82%, transparent 97%);
   }
   .logo { display: block; width: 260px; max-width: 72vw; height: auto; margin: 0 auto; filter: drop-shadow(0 0 18px rgba(6,239,253,.08)); }
-  .hero h1 { font: 500 2rem/1.1 var(--display); letter-spacing: -0.035em; margin: 28px 0 0; text-wrap: balance; }
+  .hero h1 { font: 700 2rem/1.15 var(--display); letter-spacing: -0.02em; margin: 28px 0 0; text-wrap: balance; }
   .hero p { margin: 12px auto 0; max-width: 30rem; font-size: 15px; color: var(--muted); }
 
   form { padding-block: 8px 40px; }
@@ -72,7 +72,7 @@
   fieldset + fieldset { margin-top: 20px; }
   legend { padding: 0; display: flex; gap: 12px; align-items: baseline; }
   .qn { color: var(--gold); font-size: 12px; font-weight: 700; letter-spacing: .12em; font-variant-numeric: tabular-nums; }
-  .qt { font: 500 1.3rem/1.25 var(--display); letter-spacing: -0.02em; }
+  .qt { font: 600 1.15rem/1.35 var(--display); letter-spacing: -0.01em; }
   .req { color: var(--turq); }
   .helper { margin: 6px 0 0 30px; font-size: 13px; color: var(--muted); }
 
@@ -110,7 +110,7 @@
 
   .notas .answer { flex-direction: column; justify-content: center; gap: 2px; padding: 10px 4px; min-height: 72px; text-align: center; }
   .notas .answer::before, .notas .answer::after { width: 14px; height: 14px; }
-  .nota-n { font: 500 1.5rem/1 var(--display); color: var(--gold); }
+  .nota-n { font: 700 1.4rem/1 var(--display); color: var(--gold); }
   .answer:has(input:checked) .nota-n { color: #7af7ff; }
   .nota-t { font-size: 11px; font-weight: 600; color: var(--muted); }
   .escala { display: flex; justify-content: space-between; margin-top: 6px; font-size: 11px; color: var(--muted); }
@@ -145,7 +145,7 @@
     border: 1px solid rgba(6,239,253,.4); background: rgba(6,239,253,.1); color: var(--turq);
   }
   .badge svg { width: 24px; height: 24px; }
-  .done h2 { margin: 24px 0 0; font: 500 2.2rem/1.1 var(--display); letter-spacing: -0.035em; }
+  .done h2 { margin: 24px 0 0; font: 700 2rem/1.15 var(--display); letter-spacing: -0.02em; }
   .done p { margin: 12px auto 0; max-width: 28rem; color: var(--muted); line-height: 1.7; }
 
   .sign {
